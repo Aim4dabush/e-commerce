@@ -1,0 +1,13 @@
+@import "../../SassVariables.scss";
+
+.container {
+  background-color: $secondary;
+  color: $primary;
+  display: flex;
+  padding: 1rem;
+
+  .brand {
+    flex-basis: content;
+    flex-grow: 1;
+  }
+}

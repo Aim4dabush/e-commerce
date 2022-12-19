@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import RoutePaths from "./routes/RoutePaths";
 
 //styles
-import "./index.css";
+import "./index.module.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
