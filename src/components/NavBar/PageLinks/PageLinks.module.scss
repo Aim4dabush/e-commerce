@@ -3,12 +3,12 @@
 .linkList {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 2;
-  gap: 2rem;
+  flex-grow: 1;
 
   & li {
     display: flex;
     align-items: center;
+    flex-grow: 1;
   }
 
   & li a {
