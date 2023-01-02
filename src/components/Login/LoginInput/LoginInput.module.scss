@@ -1,0 +1,13 @@
+.inputControl {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    width: 250px;
+    padding: 0.5rem 0.25rem;
+  }
+
+  label {
+    text-transform: capitalize;
+  }
+}
