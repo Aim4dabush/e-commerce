@@ -1,0 +1,14 @@
+@import "../../../SassVariables.scss";
+
+.btn {
+  background-color: $primary;
+  border: none;
+  color: $secondary;
+  font-weight: $semi;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background-color: $link;
+    cursor: pointer;
+  }
+}
