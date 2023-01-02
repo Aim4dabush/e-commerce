@@ -1,25 +1,12 @@
 import styles from "./Login.module.scss";
 
 //components
-import Button from "../../components/GlobalComponents/Button/Button";
-import { Link } from "react-router-dom";
-import LoginInput from "../../components/Login/LoginInput/LoginInput";
+import LoginForm from "../../components/Login/LoginForm/LoginForm";
 
 const Login = () => {
   return (
     <div className={styles.loginContainer}>
-      <form className={styles.form}>
-        <h1 className={styles.title}>Login</h1>
-        <LoginInput name={"email"} />
-        <LoginInput name={"password"} />
-        <Button>Login</Button>
-        <p className={styles.text}>
-          Not a member?{" "}
-          <Link className={styles.signUp} to={"/sign-up"}>
-            Sign up here
-          </Link>
-        </p>
-      </form>
+      <LoginForm />
     </div>
   );
 };
