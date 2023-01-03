@@ -7,6 +7,8 @@
   padding: 1rem;
 
   .brand {
+    color: $primary;
     flex: 1 1 content;
+    text-decoration: none;
   }
 }
