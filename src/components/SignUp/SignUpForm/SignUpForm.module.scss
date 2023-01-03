@@ -1,0 +1,20 @@
+@import "../../../SassVariables.scss";
+
+.form {
+  background-color: $secondary;
+  border-radius: 8px;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  .error {
+    background-color: $error;
+    border-color: $error;
+  }
+
+  .title {
+    text-align: center;
+  }
+}

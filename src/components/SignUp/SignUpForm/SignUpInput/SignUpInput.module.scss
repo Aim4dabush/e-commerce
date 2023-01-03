@@ -1,0 +1,19 @@
+@import "../../../../SassVariables.scss";
+
+.inputControl {
+  display: flex;
+  flex-direction: column;
+
+  .errorText {
+    color: $error;
+  }
+
+  .input {
+    padding: 0.5rem 0.25rem;
+    width: 250px;
+  }
+
+  label {
+    text-transform: capitalize;
+  }
+}
