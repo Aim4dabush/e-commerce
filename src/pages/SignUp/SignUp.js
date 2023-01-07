@@ -1,7 +1,8 @@
-import styles from "./SignUp.module.scss";
-
 //components
 import SignUpForm from "../../components/SignUp/SignUpForm/SignUpForm";
+
+//styles
+import styles from "./SignUp.module.scss";
 
 const SignUp = () => {
   return (
