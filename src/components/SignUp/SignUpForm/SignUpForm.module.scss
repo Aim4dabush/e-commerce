@@ -3,6 +3,7 @@
 .form {
   background-color: $secondary;
   border-radius: 8px;
+  box-shadow: 5px 5px 8px $shadow;
   color: $primary;
   display: flex;
   flex-direction: column;
