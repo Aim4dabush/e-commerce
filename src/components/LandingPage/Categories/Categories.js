@@ -1,5 +1,5 @@
 //components
-import Category from "./Category/Category";
+import CategoryCard from "../CategoryCard/CategoryCard";
 
 //images
 import automotive from "../../../assets/automotive.jpg";
@@ -30,69 +30,69 @@ import styles from "./Categories.module.scss";
 const Categories = () => {
   return (
     <div className={styles.categoriesContainer}>
-      <Category image={products} name={"products"}>
+      <CategoryCard image={products} name={"products"}>
         All Products
-      </Category>
-      <Category image={automotive} name={"automotive"}>
+      </CategoryCard>
+      <CategoryCard image={automotive} name={"automotive"}>
         Automotive
-      </Category>
-      <Category image={fragrance} name={"fragrance"}>
+      </CategoryCard>
+      <CategoryCard image={fragrance} name={"fragrance"}>
         Fragrance
-      </Category>
-      <Category image={furniture} name={"furniture"}>
+      </CategoryCard>
+      <CategoryCard image={furniture} name={"furniture"}>
         Furniture
-      </Category>
-      <Category image={groceries} name={"groceries"}>
+      </CategoryCard>
+      <CategoryCard image={groceries} name={"groceries"}>
         Groceries
-      </Category>
-      <Category image={decorations} name={"home-decoration"}>
+      </CategoryCard>
+      <CategoryCard image={decorations} name={"home-decoration"}>
         Home Decorations
-      </Category>
-      <Category image={jewelry} name={"jewellery"}>
+      </CategoryCard>
+      <CategoryCard image={jewelry} name={"jewellery"}>
         Jewelry
-      </Category>
-      <Category image={laptop} name={"laptop"}>
+      </CategoryCard>
+      <CategoryCard image={laptop} name={"laptop"}>
         Laptop
-      </Category>
-      <Category image={lighting} name={"lighting"}>
+      </CategoryCard>
+      <CategoryCard image={lighting} name={"lighting"}>
         Lighting
-      </Category>
-      <Category image={mensShirts} name={"mens-shirts"}>
+      </CategoryCard>
+      <CategoryCard image={mensShirts} name={"mens-shirts"}>
         Men's Shirts
-      </Category>
-      <Category image={mensShoes} name={"mens-shoes"}>
+      </CategoryCard>
+      <CategoryCard image={mensShoes} name={"mens-shoes"}>
         Men's Shoes
-      </Category>
-      <Category image={mensWatches} name={"mens-watches"}>
+      </CategoryCard>
+      <CategoryCard image={mensWatches} name={"mens-watches"}>
         Men's Watches
-      </Category>
-      <Category image={motorcycle} name="motorcycle">
+      </CategoryCard>
+      <CategoryCard image={motorcycle} name="motorcycle">
         Motorcycle
-      </Category>
-      <Category image={skinCare} name={"skin-care"}>
+      </CategoryCard>
+      <CategoryCard image={skinCare} name={"skin-care"}>
         Skin Care
-      </Category>
-      <Category image={smartPhone} name={"smartphones"}>
+      </CategoryCard>
+      <CategoryCard image={smartPhone} name={"smartphones"}>
         Smartphones
-      </Category>
-      <Category image={sunglasses} name={"sunglasses"}>
+      </CategoryCard>
+      <CategoryCard image={sunglasses} name={"sunglasses"}>
         Sunglasses
-      </Category>
-      <Category image={tops} name={"tops"}>
+      </CategoryCard>
+      <CategoryCard image={tops} name={"tops"}>
         Tops
-      </Category>
-      <Category image={womensBags} name={"womens-bags"}>
+      </CategoryCard>
+      <CategoryCard image={womensBags} name={"womens-bags"}>
         Women's Bags
-      </Category>
-      <Category image={womensDresses} name={"womens-dresses"}>
+      </CategoryCard>
+      <CategoryCard image={womensDresses} name={"womens-dresses"}>
         Women's Dresses
-      </Category>
-      <Category image={womensShoes} name={"womens-shoes"}>
+      </CategoryCard>
+      <CategoryCard image={womensShoes} name={"womens-shoes"}>
         Women's Shoes
-      </Category>
-      <Category image={womensWatches} name={"womens-watches"}>
+      </CategoryCard>
+      <CategoryCard image={womensWatches} name={"womens-watches"}>
         Women's Watches
-      </Category>
+      </CategoryCard>
     </div>
   );
 };

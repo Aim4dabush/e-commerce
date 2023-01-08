@@ -1,3 +1,4 @@
+//styles
 import styles from "./LoginInput.module.scss";
 
 const LoginInput = ({ name }) => {

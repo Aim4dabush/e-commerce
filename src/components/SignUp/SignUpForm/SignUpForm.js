@@ -2,7 +2,7 @@ import { useState } from "react";
 
 //components
 import Button from "../../GlobalComponents/Button/Button";
-import SignUpInput from "./SignUpInput/SignUpInput";
+import SignUpInput from "../SignUpInput/SignUpInput";
 
 //hooks
 import { useValidation } from "../../../hooks/useValidation";

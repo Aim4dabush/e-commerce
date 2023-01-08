@@ -1,3 +1,4 @@
+//styles
 import styles from "./SignUpInput.module.scss";
 
 const SignUpInput = ({ children, classStyle, error, errorMessage, handleOnBlur, handleOnChange, id, type, value }) => {

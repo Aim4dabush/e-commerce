@@ -2,17 +2,19 @@ import { useNavigate } from "react-router-dom";
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { productsAction } from "../../../../redux/slices/productsSlice";
+import { productsAction } from "../../../redux/slices/productsSlice";
 
 //styles
-import styles from "./Category.module.scss";
+import styles from "./CategoryCard.module.scss";
 
-const Category = ({ children, image, name }) => {
+const CategoryCard = ({ children, image, name }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const products = useSelector((state) => state.products.products);
 
+  //filters products by category for products page
   const selectedCategory = () => {
+    //if all products is not selected then display products with selected category
     if (name !== "products") {
       const productsByCategory = products.filter((product) => {
         return product.category === name;
@@ -20,6 +22,8 @@ const Category = ({ children, image, name }) => {
 
       dispatch(productsAction.setProductsDisplay(productsByCategory));
       navigate("/products");
+
+      //if all products is selected then display all products
     } else {
       dispatch(productsAction.setProductsDisplay(products));
       navigate("/products");
@@ -36,4 +40,4 @@ const Category = ({ children, image, name }) => {
   );
 };
 
-export default Category;
+export default CategoryCard;
