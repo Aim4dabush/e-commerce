@@ -1,0 +1,7 @@
+.displayContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, min(1fr));
+  grid-template-rows: auto max(350px);
+  padding: 1rem;
+}

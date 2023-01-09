@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //components
-import Button from "../../GlobalComponents/Button/Button";
+import PrimaryButton from "../../GlobalComponents/PrimaryButton/PrimaryButton";
 import SignUpInput from "../SignUpInput/SignUpInput";
 
 //hooks
@@ -103,7 +103,7 @@ const SignUpForm = () => {
       >
         confirm password
       </SignUpInput>
-      <Button>Register</Button>
+      <PrimaryButton>Register</PrimaryButton>
     </form>
   );
 };

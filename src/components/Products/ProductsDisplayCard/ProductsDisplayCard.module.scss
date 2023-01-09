@@ -1,0 +1,24 @@
+@import "../../../SassVariables.scss";
+
+.card {
+  color: $secondary;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  width: 100%;
+
+  .imgContainer {
+    height: 200px;
+
+    .img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .title {
+    text-align: center;
+  }
+}

@@ -1,5 +1,5 @@
 //components
-import Button from "../../GlobalComponents/Button/Button";
+import PrimaryButton from "../../GlobalComponents/PrimaryButton/PrimaryButton";
 import { Link } from "react-router-dom";
 import LoginInput from "../LoginInput/LoginInput";
 
@@ -12,7 +12,7 @@ const LoginForm = () => {
       <h1 className={styles.title}>Login</h1>
       <LoginInput name={"email"} />
       <LoginInput name={"password"} />
-      <Button>Login</Button>
+      <PrimaryButton>Login</PrimaryButton>
       <p className={styles.text}>
         Not a member?{" "}
         <Link className={styles.signUp} to={"/sign-up"}>
