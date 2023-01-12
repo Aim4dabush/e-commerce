@@ -1,0 +1,36 @@
+@import "../../../../SassVariables.scss";
+
+.card {
+  display: grid;
+  grid-template-columns: 275px;
+  grid-template-rows: 275px 150px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .imgContainer {
+    height: 100%;
+
+    .img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .infoContainer {
+    align-items: center;
+    border: 2px solid $secondary;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+      width: 100%;
+    }
+  }
+}

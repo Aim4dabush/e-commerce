@@ -15,14 +15,14 @@ const ProductsDisplayCard = ({ brand, id, image, price, rating, title }) => {
 
   return (
     <div className={styles.card}>
-      <NavLink to={`${id}`} className={styles.imgContainer}>
+      <NavLink to={`/products/${id}`} className={styles.imgContainer}>
         <img className={styles.img} src={image} alt={title} />
       </NavLink>
       <h5 className={styles.title}>{title}</h5>
       <p>{brand}</p>
       <p>Price: ${price}</p>
       <p>Rating: {rating}</p>
-      <SecondaryButton className={styles.btn} onClick={viewDetailsHandler}>
+      <SecondaryButton className={styles.btn} onClickHandler={viewDetailsHandler}>
         View Details
       </SecondaryButton>
     </div>

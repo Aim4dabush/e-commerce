@@ -1,0 +1,15 @@
+@import "../../../../SassVariables.scss";
+
+.btnContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+
+  .btn {
+    background-color: $secondary;
+    border: none;
+    border-radius: 5px;
+    color: $primary;
+    padding: 0.5rem 1rem;
+  }
+}

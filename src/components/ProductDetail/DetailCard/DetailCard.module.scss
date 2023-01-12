@@ -1,0 +1,48 @@
+@import "../../../SassVariables.scss";
+
+.card {
+  display: grid;
+  grid-template-columns: 750px 450px;
+  grid-template-rows: 400px;
+  padding: 1rem;
+
+  .imgContainer {
+    height: 100%;
+
+    .img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .infoContainer {
+    border: 2px solid $secondary;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+
+    .currencyWrapper {
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-evenly;
+    }
+
+    .dataWrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .description {
+      text-align: center;
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+}

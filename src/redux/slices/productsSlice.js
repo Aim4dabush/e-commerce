@@ -5,8 +5,12 @@ const productsSlice = createSlice({
   initialState: {
     products: [],
     productsDisplay: [],
+    similarProducts: [],
   },
   reducers: {
+    setSimilarProducts(state, action) {
+      state.similarProducts = action.payload;
+    },
     setProducts(state, action) {
       state.products = action.payload;
     },
