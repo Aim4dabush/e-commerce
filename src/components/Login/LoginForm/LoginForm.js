@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 //components
 import PrimaryButton from "../../GlobalComponents/PrimaryButton/PrimaryButton";
@@ -14,6 +15,7 @@ import styles from "./LoginForm.module.scss";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
@@ -28,6 +30,7 @@ const LoginForm = () => {
     dispatch(loginUser(loginInfo.email, loginInfo.password));
     emailRef.current.value = "";
     passwordRef.current.value = "";
+    navigate("/products");
   };
 
   return (
