@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 //components
 import PrimaryButton from "../../GlobalComponents/PrimaryButton/PrimaryButton";
@@ -7,10 +8,16 @@ import SignUpInput from "./SignUpInput/SignUpInput";
 //hooks
 import { useValidation } from "../../../hooks/useValidation";
 
+//redux
+import { useDispatch } from "react-redux";
+import { registerUser } from "../../../redux/thunks/authThunk";
+
 //styles
 import styles from "./SignUpForm.module.scss";
 
 const SignUpForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     error: emailError,
     isValid: emailValid,
@@ -51,12 +58,14 @@ const SignUpForm = () => {
 
     //if form is valid submit data
     if (formIsValid && confirm === password) {
-      console.log(confirm, email, password);
+      dispatch(registerUser(email, password));
       setConfirm("");
       setConfirmError(false);
       emailReset();
       passwordReset();
     }
+
+    navigate("/login");
   };
 
   //checks for errors and use error styles

@@ -14,5 +14,23 @@
   & li a {
     color: $primary;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .btn {
+    background-color: transparent;
+    border: none;
+    color: $primary;
+    font-size: 16px;
+    font-family: $merriweather;
+    font-weight: $regular;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }
