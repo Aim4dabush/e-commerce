@@ -1,5 +1,5 @@
 //components
-import ProductsDisplayCard from "../ProductsDisplayCard/ProductsDisplayCard";
+import ProductsDisplayCard from "./ProductsDisplayCard/ProductsDisplayCard";
 
 //redux
 import { useSelector } from "react-redux";

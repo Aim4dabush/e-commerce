@@ -1,0 +1,14 @@
+.sortContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .category {
+    margin-bottom: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

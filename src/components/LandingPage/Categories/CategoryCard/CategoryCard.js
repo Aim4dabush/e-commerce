@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { productsAction } from "../../../redux/slices/productsSlice";
+import { productsAction } from "../../../../redux/slices/productsSlice";
 
 //styles
 import styles from "./CategoryCard.module.scss";

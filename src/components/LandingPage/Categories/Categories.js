@@ -1,5 +1,5 @@
 //components
-import CategoryCard from "../CategoryCard/CategoryCard";
+import CategoryCard from "./CategoryCard/CategoryCard";
 
 //images
 import automotive from "../../../assets/automotive.jpg";
@@ -36,8 +36,8 @@ const Categories = () => {
       <CategoryCard image={automotive} name={"automotive"}>
         Automotive
       </CategoryCard>
-      <CategoryCard image={fragrance} name={"fragrance"}>
-        Fragrance
+      <CategoryCard image={fragrance} name={"fragrances"}>
+        Fragrances
       </CategoryCard>
       <CategoryCard image={furniture} name={"furniture"}>
         Furniture
@@ -48,11 +48,11 @@ const Categories = () => {
       <CategoryCard image={decorations} name={"home-decoration"}>
         Home Decorations
       </CategoryCard>
-      <CategoryCard image={jewelry} name={"jewellery"}>
+      <CategoryCard image={jewelry} name={"womens-jewellery"}>
         Jewelry
       </CategoryCard>
-      <CategoryCard image={laptop} name={"laptop"}>
-        Laptop
+      <CategoryCard image={laptop} name={"laptops"}>
+        Laptops
       </CategoryCard>
       <CategoryCard image={lighting} name={"lighting"}>
         Lighting
@@ -69,7 +69,7 @@ const Categories = () => {
       <CategoryCard image={motorcycle} name="motorcycle">
         Motorcycle
       </CategoryCard>
-      <CategoryCard image={skinCare} name={"skin-care"}>
+      <CategoryCard image={skinCare} name={"skincare"}>
         Skin Care
       </CategoryCard>
       <CategoryCard image={smartPhone} name={"smartphones"}>

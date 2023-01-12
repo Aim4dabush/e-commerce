@@ -1,7 +1,7 @@
 //components
 import PrimaryButton from "../../GlobalComponents/PrimaryButton/PrimaryButton";
 import { Link } from "react-router-dom";
-import LoginInput from "../LoginInput/LoginInput";
+import LoginInput from "./LoginInput/LoginInput";
 
 //styles
 import styles from "./LoginForm.module.scss";

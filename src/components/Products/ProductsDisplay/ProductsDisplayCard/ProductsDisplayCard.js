@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 
 //components
-import SecondaryButton from "../../GlobalComponents/SecondaryButton/SecondaryButton";
+import SecondaryButton from "../../../GlobalComponents/SecondaryButton/SecondaryButton";
 
 //styles
 import styles from "./ProductsDisplayCard.module.scss";

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 //components
 import PrimaryButton from "../../GlobalComponents/PrimaryButton/PrimaryButton";
-import SignUpInput from "../SignUpInput/SignUpInput";
+import SignUpInput from "./SignUpInput/SignUpInput";
 
 //hooks
 import { useValidation } from "../../../hooks/useValidation";
