@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import App from "../App";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
-import LandingPage from "../pages/LandingPage/LandingPage";
 import Login from "../pages/Login/Login";
 import OrderHistory from "../pages/OrderHistory/OrderHistory";
 import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
@@ -19,7 +18,7 @@ const RoutePaths = () => {
   return (
     <Routes>
       <Route element={<App />} path="/">
-        <Route index element={<LandingPage />} />
+        <Route index element={<Products />} />
         <Route element={<Cart />} path="cart" />
         <Route element={<Checkout />} path="checkout" />
         <Route element={<Login />} path="login" />
