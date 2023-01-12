@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { productsAction } from "../../../../redux/slices/productsSlice";
+import { productsActions } from "../../../../redux/slices/productsSlice";
 
 //styles
 import styles from "./CategoryCard.module.scss";
@@ -20,12 +20,12 @@ const CategoryCard = ({ children, image, name }) => {
         return product.category === name;
       });
 
-      dispatch(productsAction.setProductsDisplay(productsByCategory));
+      dispatch(productsActions.setProductsDisplay(productsByCategory));
       navigate("/products");
 
       //if all products is selected then display all products
     } else {
-      dispatch(productsAction.setProductsDisplay(products));
+      dispatch(productsActions.setProductsDisplay(products));
       navigate("/products");
     }
   };

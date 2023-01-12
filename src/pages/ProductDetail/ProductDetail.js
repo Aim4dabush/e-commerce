@@ -7,7 +7,7 @@ import SimilarProducts from "../../components/ProductDetail/SimilarProducts/Simi
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { productsAction } from "../../redux/slices/productsSlice";
+import { productsActions } from "../../redux/slices/productsSlice";
 
 //styles
 import styles from "./ProductDetail.module.scss";
@@ -33,7 +33,7 @@ const ProductDetail = () => {
   });
 
   useEffect(() => {
-    dispatch(productsAction.setSimilarProducts(similar));
+    dispatch(productsActions.setSimilarProducts(similar));
   }, [dispatch, item, similar]);
 
   return (

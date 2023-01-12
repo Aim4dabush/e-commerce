@@ -3,7 +3,7 @@ import Category from "./Category/Category";
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { productsAction } from "../../../../redux/slices/productsSlice";
+import { productsActions } from "../../../../redux/slices/productsSlice";
 
 //styles
 import styles from "./CategorySort.module.scss";
@@ -13,7 +13,7 @@ const CategorySort = () => {
   const products = useSelector((state) => state.products.products);
 
   const allProductsHandler = () => {
-    dispatch(productsAction.setProductsDisplay(products));
+    dispatch(productsActions.setProductsDisplay(products));
   };
 
   return (

@@ -1,6 +1,6 @@
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { productsAction } from "../../../../../redux/slices/productsSlice";
+import { productsActions } from "../../../../../redux/slices/productsSlice";
 
 //styles
 import styles from "./Category.module.scss";
@@ -14,7 +14,7 @@ const Category = ({ children, category }) => {
       return product.category === category;
     });
 
-    dispatch(productsAction.setProductsDisplay(selectedCategory));
+    dispatch(productsActions.setProductsDisplay(selectedCategory));
   };
 
   return (
