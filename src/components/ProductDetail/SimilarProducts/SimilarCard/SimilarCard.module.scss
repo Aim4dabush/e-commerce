@@ -1,9 +1,12 @@
 @import "../../../../SassVariables.scss";
 
 .card {
+  border: 2px solid $secondary;
+  box-shadow: 5px 5px 9px $shadow;
   display: grid;
   grid-template-columns: 275px;
   grid-template-rows: 275px 150px;
+  padding: 0.5rem;
 
   &:hover {
     cursor: pointer;
@@ -21,10 +24,8 @@
 
   .infoContainer {
     align-items: center;
-    border: 2px solid $secondary;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
 
     .wrapper {
       display: flex;

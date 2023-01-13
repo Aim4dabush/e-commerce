@@ -1,6 +1,7 @@
 @import "../../../SassVariables.scss";
 
 .card {
+  box-shadow: 5px 5px 9px $shadow;
   display: grid;
   grid-template-columns: 750px 450px;
   grid-template-rows: 400px;
