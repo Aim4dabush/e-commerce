@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 //components
 import App from "../App";
@@ -14,22 +14,28 @@ import ShippingPolicy from "../pages/ShippingPolicy/ShippingPolicy";
 import SignUp from "../pages/SignUp/SignUp";
 import WishList from "../pages/WishList/WishList";
 
+//redux
+import { useSelector } from "react-redux";
+
 const RoutePaths = () => {
+  const isLoggedIn = useSelector((state) => state.auth.user.token);
+
   return (
     <Routes>
       <Route element={<App />} path="/">
         <Route index element={<Products />} />
-        <Route element={<Cart />} path="cart" />
+        {isLoggedIn && <Route element={<Cart />} path="cart" />}
         <Route element={<Checkout />} path="checkout" />
-        <Route element={<Login />} path="login" />
-        <Route element={<OrderHistory />} path="order-history" />
+        {!isLoggedIn && <Route element={<Login />} path="login" />}
+        {isLoggedIn && <Route element={<OrderHistory />} path="order-history" />}
         <Route element={<PrivacyPolicy />} path="privacy-policy" />
         <Route element={<ProductDetail />} path="products/:productId" />
         <Route element={<Products />} path="products" />
         <Route element={<ReturnPolicy />} path="return-policy" />
         <Route element={<ShippingPolicy />} path="shipping-policy" />
         <Route element={<SignUp />} path="sign-up" />
-        <Route element={<WishList />} path="wish-list" />
+        {isLoggedIn && <Route element={<WishList />} path="wish-list" />}
+        <Route element={<Navigate to={"/login"} />} path="*" />
       </Route>
     </Routes>
   );

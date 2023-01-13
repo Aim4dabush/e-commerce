@@ -2,13 +2,11 @@
 
 .linkList {
   display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
+  gap: 2rem;
 
   & li {
     display: flex;
     align-items: center;
-    flex-grow: 1;
   }
 
   & li a {
