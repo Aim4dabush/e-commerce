@@ -6,7 +6,7 @@ import SecondaryButton from "../../../GlobalComponents/SecondaryButton/Secondary
 //styles
 import styles from "./ProductsDisplayCard.module.scss";
 
-const ProductsDisplayCard = ({ brand, id, image, price, rating, title }) => {
+const ProductsDisplayCard = ({ brand, category, id, image, price, rating, title }) => {
   const navigate = useNavigate();
 
   const viewDetailsHandler = () => {
@@ -19,9 +19,14 @@ const ProductsDisplayCard = ({ brand, id, image, price, rating, title }) => {
         <img className={styles.img} src={image} alt={title} />
       </NavLink>
       <h5 className={styles.title}>{title}</h5>
-      <p>{brand}</p>
-      <p>Price: ${price}</p>
-      <p>Rating: {rating}</p>
+      <div className={styles.wrapper}>
+        <p>{brand}</p>
+        <p>{category}</p>
+      </div>
+      <div className={styles.wrapper}>
+        <p>Price: ${price}</p>
+        <p>Rating: {rating}</p>
+      </div>
       <SecondaryButton className={styles.btn} onClickHandler={viewDetailsHandler}>
         View Details
       </SecondaryButton>

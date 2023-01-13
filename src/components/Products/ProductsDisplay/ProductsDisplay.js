@@ -13,7 +13,18 @@ const ProductsDisplay = () => {
   return (
     <div className={styles.displayContainer}>
       {productsDisplay.map((product) => {
-        return <ProductsDisplayCard brand={product.brand} id={product.id} image={product.images[0]} key={product.id} price={product.price} rating={product.rating} title={product.title} />;
+        return (
+          <ProductsDisplayCard
+            brand={product.brand}
+            category={product.category}
+            id={product.id}
+            image={product.images[0]}
+            key={product.id}
+            price={product.price}
+            rating={product.rating}
+            title={product.title}
+          />
+        );
       })}
     </div>
   );
