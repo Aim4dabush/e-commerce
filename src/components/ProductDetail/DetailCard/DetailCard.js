@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 //components
 import CardButtons from "./CardButtons/CardButtons";
 import InputQuantity from "./InputQuantity/InputQuantity";
@@ -6,6 +8,8 @@ import InputQuantity from "./InputQuantity/InputQuantity";
 import styles from "./DetailCard.module.scss";
 
 const DetailCard = ({ item }) => {
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
@@ -21,9 +25,9 @@ const DetailCard = ({ item }) => {
         </div>
         <div className={styles.currencyWrapper}>
           <p>${item.price}</p>
-          <InputQuantity />
+          <InputQuantity quantity={quantity} setQuantity={setQuantity} />
         </div>
-        <CardButtons />
+        <CardButtons quantity={quantity} />
       </div>
     </div>
   );

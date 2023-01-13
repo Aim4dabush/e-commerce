@@ -1,12 +1,26 @@
 //styles
 import styles from "./InputQuantity.module.scss";
 
-const InputQuantity = () => {
+const InputQuantity = ({ quantity, setQuantity }) => {
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prev) => prev - 1);
+    }
+  };
+
+  const increaseQuantity = () => {
+    setQuantity((prev) => prev + 1);
+  };
+
   return (
     <div className={styles.quantityContainer}>
-      <button className={`${styles.decreaseBtn} ${styles.btn}`}>-</button>
-      <input className={`${styles.quantityInput}`} defaultValue={1} type="number" />
-      <button className={`${styles.increaseBtn} ${styles.btn}`}>+</button>
+      <button className={`${styles.decreaseBtn} ${styles.btn}`} onClick={decreaseQuantity}>
+        -
+      </button>
+      <input className={`${styles.quantityInput}`} type="number" value={quantity} readOnly />
+      <button className={`${styles.increaseBtn} ${styles.btn}`} onClick={increaseQuantity}>
+        +
+      </button>
     </div>
   );
 };
