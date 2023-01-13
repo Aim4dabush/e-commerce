@@ -1,6 +1,7 @@
 @import "../../../SassVariables.scss";
 
 .card {
+  border: 2px solid $secondary;
   box-shadow: 5px 5px 9px $shadow;
   display: grid;
   grid-template-columns: 750px 450px;
@@ -18,7 +19,6 @@
   }
 
   .infoContainer {
-    border: 2px solid $secondary;
     display: flex;
     flex-direction: column;
     gap: 2rem;
