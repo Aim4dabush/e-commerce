@@ -27,7 +27,7 @@ const DetailCard = ({ item }) => {
           <p>${item.price}</p>
           <InputQuantity quantity={quantity} setQuantity={setQuantity} />
         </div>
-        <CardButtons quantity={quantity} />
+        <CardButtons quantity={quantity} selectedItem={item} />
       </div>
     </div>
   );
