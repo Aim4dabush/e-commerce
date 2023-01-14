@@ -16,8 +16,8 @@ const cartsSlice = createSlice({
     setDeleteWishItem(state, action) {
       state.wishData.splice(action.payload, 1);
     },
-    setLoadData(state) {
-      state.loadData = !state.loadData;
+    setLoadData(state, action) {
+      state.loadData = action.payload;
     },
     setReplaceExistingShoppingItem(state, action) {
       state.shoppingData.splice(action.payload.index, 1, action.payload.item);

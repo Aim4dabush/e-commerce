@@ -17,7 +17,7 @@ const Cart = () => {
   useEffect(() => {
     if (loadData) {
       dispatch(addToShoppingCart(userId, shoppingData));
-      dispatch(cartsActions.setLoadData());
+      dispatch(cartsActions.setLoadData(false));
     }
   }, [dispatch, loadData, shoppingData, userId]);
 

@@ -43,7 +43,7 @@ const CardButtons = ({ selectedItem, quantity }) => {
       );
     }
 
-    dispatch(cartsActions.setLoadData());
+    dispatch(cartsActions.setLoadData(true));
     navigate("/cart");
   };
 
@@ -72,7 +72,7 @@ const CardButtons = ({ selectedItem, quantity }) => {
       );
     }
 
-    dispatch(cartsActions.setLoadData());
+    dispatch(cartsActions.setLoadData(true));
     navigate("/wish-list");
   };
 

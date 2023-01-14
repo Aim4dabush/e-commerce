@@ -17,7 +17,7 @@ const WishList = () => {
   useEffect(() => {
     if (loadData) {
       dispatch(addToWishCart(userId, wishData));
-      dispatch(cartsActions.setLoadData());
+      dispatch(cartsActions.setLoadData(false));
     }
   }, [dispatch, loadData, userId, wishData]);
 
