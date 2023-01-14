@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 //components
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import LoginInput from "./LoginInput/LoginInput";
 
 //redux
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../../redux/thunks/authThunk";
 
 //styles
@@ -18,20 +18,23 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const isAuth = useSelector((state) => state.auth.user.token);
 
   const onLogin = (e) => {
     e.preventDefault();
 
-    const loginInfo = {
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-    };
-
-    dispatch(loginUser(loginInfo.email, loginInfo.password));
+    dispatch(loginUser(emailRef.current.value, passwordRef.current.value));
     emailRef.current.value = "";
     passwordRef.current.value = "";
+
     navigate("/products");
   };
+
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/products");
+    }
+  }, [isAuth, navigate]);
 
   return (
     <form className={styles.form} onSubmit={onLogin}>

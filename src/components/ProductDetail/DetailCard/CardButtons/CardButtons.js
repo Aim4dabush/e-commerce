@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 //components
@@ -7,7 +6,6 @@ import SecondaryButton from "../../../GlobalComponents/SecondaryButton/Secondary
 //redux
 import { useDispatch, useSelector } from "react-redux";
 import { cartsActions } from "../../../../redux/slices/cartsSlice";
-import { addToShoppingCart } from "../../../../redux/thunks/shoppingCartThunk";
 
 //styles
 import styles from "./CardButtons.module.scss";
@@ -16,8 +14,9 @@ const CardButtons = ({ selectedItem, quantity }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const shoppingData = useSelector((state) => state.carts.shoppingData);
-  const userId = useSelector((state) => state.auth.user.id);
-  console.log(shoppingData);
+  const wishData = useSelector((state) => state.carts.wishData);
+
+  console.log(shoppingData, wishData);
 
   const addItemToShoppingCart = () => {
     const itemData = {
@@ -33,8 +32,6 @@ const CardButtons = ({ selectedItem, quantity }) => {
       return item.id === itemData.id;
     });
 
-    console.log(existingItem);
-
     if (existingItem === -1) {
       dispatch(cartsActions.setShoppingData(itemData));
     } else {
@@ -46,16 +43,38 @@ const CardButtons = ({ selectedItem, quantity }) => {
       );
     }
 
-    // navigate("/cart");
+    dispatch(cartsActions.setLoadData());
+    navigate("/cart");
   };
 
   const navigateToWishList = () => {
+    const itemData = {
+      id: selectedItem.id,
+      image: selectedItem.images[0],
+      price: selectedItem.price,
+      quantity: quantity,
+      subTotal: quantity * selectedItem.price,
+      title: selectedItem.title,
+    };
+
+    const existingItem = shoppingData.findIndex((item) => {
+      return item.id === itemData.id;
+    });
+
+    if (existingItem === -1) {
+      dispatch(cartsActions.setWishData(itemData));
+    } else {
+      dispatch(
+        cartsActions.setReplaceExistingWishItem({
+          index: existingItem,
+          item: itemData,
+        })
+      );
+    }
+
+    dispatch(cartsActions.setLoadData());
     navigate("/wish-list");
   };
-
-  useEffect(() => {
-    dispatch(addToShoppingCart(userId, shoppingData));
-  }, [dispatch, shoppingData, userId]);
 
   return (
     <div className={styles.btnContainer}>

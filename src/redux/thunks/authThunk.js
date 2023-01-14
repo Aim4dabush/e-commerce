@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, getIdToken, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
 
-//slice
+//actions
 import { authActions } from "../slices/authSlice";
 import { cartsActions } from "../slices/cartsSlice";
 
@@ -52,6 +52,7 @@ export const logoutUser = () => {
       localStorage.clear();
       dispatch(authActions.resetUser());
       dispatch(cartsActions.setResetShoppingData());
+      dispatch(cartsActions.setResetWishData());
     });
   };
 };

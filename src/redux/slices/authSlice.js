@@ -13,18 +13,18 @@ const authSlice = createSlice({
     },
   },
   reducers: {
-    setUser(state, action) {
-      state.user = {
-        id: action.payload.id,
-        token: action.payload.token,
-        expiration: 36000000,
-      };
-    },
     resetUser(state) {
       state.user = {
         id: null,
         token: null,
         expiration: null,
+      };
+    },
+    setUser(state, action) {
+      state.user = {
+        id: action.payload.id,
+        token: action.payload.token,
+        expiration: 36000000,
       };
     },
   },
