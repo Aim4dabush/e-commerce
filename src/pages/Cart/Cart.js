@@ -21,7 +21,7 @@ const Cart = () => {
     }
   }, [dispatch, loadData, shoppingData, userId]);
 
-  return <div>Cart</div>;
+  return <section>Cart</section>;
 };
 
 export default Cart;

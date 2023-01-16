@@ -1,7 +1,8 @@
+//styles
 import styles from "./PrivacyPolicy.module.scss";
 
 const PrivacyPolicy = () => {
-  return <div>PrivacyPolicy</div>;
+  return <section>PrivacyPolicy</section>;
 };
 
 export default PrivacyPolicy;

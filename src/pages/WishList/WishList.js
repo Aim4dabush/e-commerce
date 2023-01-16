@@ -21,7 +21,7 @@ const WishList = () => {
     }
   }, [dispatch, loadData, userId, wishData]);
 
-  return <div>WishList</div>;
+  return <section>WishList</section>;
 };
 
 export default WishList;

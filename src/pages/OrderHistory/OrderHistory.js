@@ -1,7 +1,8 @@
+//styles
 import styles from "./OrderHistory.module.scss";
 
 const OrderHistory = () => {
-  return <div>OrderHistory</div>;
+  return <section>OrderHistory</section>;
 };
 
 export default OrderHistory;

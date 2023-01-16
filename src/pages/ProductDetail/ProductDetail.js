@@ -37,10 +37,10 @@ const ProductDetail = () => {
   }, [dispatch, item, similar]);
 
   return (
-    <div className={styles.detailContainer}>
+    <section className={styles.detailContainer}>
       {item && <DetailCard item={item} />}
       {similar && <SimilarProducts />}
-    </div>
+    </section>
   );
 };
 

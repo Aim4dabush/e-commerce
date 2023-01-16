@@ -6,9 +6,9 @@ import styles from "./SignUp.module.scss";
 
 const SignUp = () => {
   return (
-    <div className={styles.signUpContainer}>
+    <section className={styles.signUpContainer}>
       <SignUpForm />
-    </div>
+    </section>
   );
 };
 

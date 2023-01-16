@@ -1,7 +1,7 @@
 import styles from "./Checkout.module.scss";
 
 const Checkout = () => {
-  return <div>Checkout</div>;
+  return <section>Checkout</section>;
 };
 
 export default Checkout;

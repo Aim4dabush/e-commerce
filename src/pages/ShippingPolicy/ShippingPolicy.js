@@ -1,7 +1,8 @@
+//styles
 import styles from "./ShippingPolicy.module.scss";
 
 const ShippingPolicy = () => {
-  return <div>ShippingPolicy</div>;
+  return <section>ShippingPolicy</section>;
 };
 
 export default ShippingPolicy;
