@@ -18,6 +18,14 @@
     }
   }
 
+  & li a span {
+    background-color: $primary;
+    border-radius: 50%;
+    color: $secondary;
+    margin-left: 0.25rem;
+    padding: 3px 8px;
+  }
+
   .btn {
     background-color: transparent;
     border: none;

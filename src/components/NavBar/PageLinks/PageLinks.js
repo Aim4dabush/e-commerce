@@ -11,6 +11,8 @@ const PageLinks = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.user.token);
+  const shoppingCart = useSelector((state) => state.carts.shoppingCart);
+  const wishCart = useSelector((state) => state.carts.wishCart);
 
   const logoutUserHandler = () => {
     dispatch(logoutUser());
@@ -22,8 +24,20 @@ const PageLinks = () => {
       <li>
         <NavLink to={"/products"}>Products</NavLink>
       </li>
-      <li>{isLoggedIn && <NavLink to={"/cart"}>Cart</NavLink>}</li>
-      <li>{isLoggedIn && <NavLink to={"/wish-list"}>Wish List</NavLink>}</li>
+      <li>
+        {isLoggedIn && (
+          <NavLink to={"/cart"}>
+            Cart<span>{shoppingCart?.length}</span>
+          </NavLink>
+        )}
+      </li>
+      <li>
+        {isLoggedIn && (
+          <NavLink to={"/wish-list"}>
+            Wish List<span>{wishCart?.length}</span>
+          </NavLink>
+        )}
+      </li>
       <li>{isLoggedIn && <NavLink to={"/order-history"}>Order History</NavLink>}</li>
       <li>{!isLoggedIn && <NavLink to={"/login"}>Login</NavLink>}</li>
       <li>
